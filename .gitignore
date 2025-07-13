@@ -1,1 +1,3 @@
 *.js
+tmp/*
+cmd/focg-content-creator/tmp/*
