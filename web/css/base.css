@@ -172,8 +172,8 @@ a:hover {
 
 #version-label {
     position: fixed;
-    right: 12px;
-    bottom: 12px;
+    right: 8px;
+    bottom: 8px;
     color: #3f3f3f;
     font-size: 0.95em;
     padding: 4px 12px;
