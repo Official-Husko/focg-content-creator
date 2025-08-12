@@ -8,6 +8,8 @@ func main() {
 	// Start the web server in a goroutine
 	go webserver.Start()
 
+	println("Web server started. You can access it at http://localhost:3621")
+
 	/*
 		jsonPath := filepath.FromSlash(name_generator.NordNameGenPath)
 		data, err := name_generator.LoadNameGenData(jsonPath)

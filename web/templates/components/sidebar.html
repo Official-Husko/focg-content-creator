@@ -1,0 +1,30 @@
+{{ define "sidebar" }}
+<aside class="sidebar expanded" id="sidebar">
+    <div class="sidebar-favicon">
+        <img src="/static/images/favicon.svg" alt="Logo" width="40" height="40" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/" title="Home"{{if eq .ActivePage "home"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">home</span>
+                <span class="sidebar-label">Home</span>
+            </a></li>
+            <li><a href="/imagepack" title="Imagepack Editor"{{if eq .ActivePage "imagepack"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">collections</span>
+                <span class="sidebar-label">Imagepack Editor</span>
+            </a></li>
+            <li><a href="/generator" title="Generator"{{if eq .ActivePage "generator"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">auto_fix_high</span>
+                <span class="sidebar-label">Generator</span>
+            </a></li>
+            <li><a href="/settings" title="Settings"{{if eq .ActivePage "settings"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">settings</span>
+                <span class="sidebar-label">Settings</span>
+            </a></li>
+        </ul>
+    </nav>
+</aside>
+<button class="sidebar-toggle-outer" id="sidebarToggle" aria-label="Toggle sidebar">
+    <span class="material-icons">chevron_left</span>
+</button>
+{{ end }}

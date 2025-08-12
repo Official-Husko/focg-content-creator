@@ -1,0 +1,48 @@
+{
+    "uuid": "123e4567-e89b-12d3-a456-426614174000",
+    "id": "com.author.werewolves",
+    "name": "Werewolves Mega Pack",
+    "author": "Author Name",
+    "description": "Imagepack specifically designed for werewolf-themed content.",
+    "source": "https://example.com/werewolves-mega-pack",
+    "version": "1.0.0",
+    "license": "CC-BY-NC-ND 3.0",
+    "subraces": ["werewolves", "humans"],
+    "tags": ["werewolves", "humans"],
+    "content": [
+        {
+            "nsfw": false,
+            "uuid": "123e4567-e89b-12d3-a456-426614174001",
+            "id": "ww.rubert",
+            "filename": "werewolf1.png",
+            "title": "Hanzo Shimada Summer Games Skin Overwatch",
+            "genders": ["male"],
+            "subraces": ["werewolves", "humans"],
+            "tags": ["Overwatch", "Hanzo", "Summer Games"],
+            "backgrounds": ["bg_thief", "bg_raider"],
+            "traits": ["thief", "raider"],
+            "metadata": {
+                "artist": "Doctor Anfelo",
+                "url": "https://www.newgrounds.com/art/view/doctoranfelo/hanzo-shimada-summer-games-2019-skin-overwatch",
+                "license": "CC-BY-NC-ND 3.0"
+            }
+        },
+        {
+            "nsfw": false,
+            "uuid": "123e4567-e89b-12d3-a456-426614174002",
+            "id": "ww.jessica",
+            "filename": "werewolf2.png",
+            "title": "Ichiro Yamamoto Shikai",
+            "genders": ["female"],
+            "subraces": ["werewolves", "humans"],
+            "tags": ["Bleach", "Ichigo", "Shikai"],
+            "backgrounds": ["bg_thief", "bg_raider"],
+            "traits": ["thief", "raider"],
+            "metadata": {
+                "artist": "Art of Lariz",
+                "url": "https://www.deviantart.com/artoflariz/art/Ichiro-Yamamoto-Shikai-410060416",
+                "license": "CC-BY-NC-ND 3.0"
+            }
+        }
+    ]
+}

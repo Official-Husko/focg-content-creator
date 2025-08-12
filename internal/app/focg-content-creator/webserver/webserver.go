@@ -12,8 +12,16 @@ import (
 	"github.com/Official-Husko/focg-content-creator/internal/app/focg-content-creator/utils/printutil"
 )
 
-// webDir is the relative path to the static web UI directory.
-var webDir = path.Join("..", "..", "web")
+// getWebDir returns the path to the web directory, using the WEB_DIR environment variable if set.
+func getWebDir() string {
+	if dir := os.Getenv("WEB_DIR"); dir != "" {
+		return dir
+	}
+	return path.Join("..", "..", "web")
+}
+
+var webDir = getWebDir()
+var templatesDir = path.Join(webDir, "templates")
 
 // Start launches the web server to serve the web UI using the chi router.
 //
@@ -27,11 +35,16 @@ func Start() {
 	}
 
 	r := chi.NewRouter()
-	r.Handle("/*", http.StripPrefix("/", http.FileServer(http.Dir(webDir))))
+
+	// Register all web routes in a separate function
+	RegisterRoutes(r, templatesDir)
+
+	// Serve static files only under /static/
+	r.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.Dir(webDir))))
 
 	printutil.Print(
 		"INFO", "WebServer",
-		"Serving FOCG Content Creator at http://localhost"+cfg.Port+" ...",
+		"Serving FoC:G Content Creator at http://localhost"+cfg.Port+" ...",
 		map[string]string{"http://localhost" + cfg.Port: printutil.ColorInfo},
 	)
 	if err := http.ListenAndServe(cfg.Port, r); err != nil {
