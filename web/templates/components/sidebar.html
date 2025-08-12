@@ -17,6 +17,30 @@
                 <span class="material-icons sidebar-icon">auto_fix_high</span>
                 <span class="sidebar-label">Generator</span>
             </a></li>
+            <li><a href="/race" title="Race Editor"{{if eq .ActivePage "race"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">groups</span>
+                <span class="sidebar-label">Race Editor</span>
+            </a></li>
+            <li><a href="/subrace" title="Subrace Editor"{{if eq .ActivePage "subrace"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">group_work</span>
+                <span class="sidebar-label">Subrace Editor</span>
+            </a></li>
+            <li><a href="/trait" title="Trait Editor"{{if eq .ActivePage "trait"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">psychology</span>
+                <span class="sidebar-label">Trait Editor</span>
+            </a></li>
+            <li><a href="/quest" title="Quest Editor"{{if eq .ActivePage "quest"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">flag</span>
+                <span class="sidebar-label">Quest Editor</span>
+            </a></li>
+            <li><a href="/texts" title="Texts Editor"{{if eq .ActivePage "texts"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">article</span>
+                <span class="sidebar-label">Texts Editor</span>
+            </a></li>
+            <li><a href="/translation" title="Translation Editor"{{if eq .ActivePage "translation"}} class="active" aria-current="page"{{end}}>
+                <span class="material-icons sidebar-icon">translate</span>
+                <span class="sidebar-label">Translation Editor</span>
+            </a></li>
             <li><a href="/settings" title="Settings"{{if eq .ActivePage "settings"}} class="active" aria-current="page"{{end}}>
                 <span class="material-icons sidebar-icon">settings</span>
                 <span class="sidebar-label">Settings</span>

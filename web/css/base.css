@@ -69,6 +69,11 @@ a:hover {
     min-height: 400px;
     text-align: center;
     gap: 1.5rem;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2.5rem 2rem;
+    position: relative;
 }
 
 .coming-soon-icon {
@@ -76,11 +81,36 @@ a:hover {
     color: #8ab4f8;
     margin-bottom: 0.5rem;
     animation: pulse 1.5s infinite alternate;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 12px rgba(138,180,248,0.18)) drop-shadow(0 0 24px rgba(138,180,248,0.10));
+    transition: filter 0.2s;
+}
+
+.coming-soon-icon::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    filter: blur(2px);
+    z-index: -1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
 }
 
 @keyframes pulse {
-    0% { opacity: 0.7; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.1); }
+    0% {
+        opacity: 0.7;
+        filter: drop-shadow(0 0 8px rgba(138,180,248,0.10));
+    }
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 24px rgba(138, 180, 248, 0.486)) drop-shadow(0 0 48px rgba(138,180,248,0.18));
+    }
 }
 
 .coming-soon h1 {
@@ -88,12 +118,72 @@ a:hover {
     font-weight: 700;
     margin: 0;
     color: #fff;
+    position: relative;
+}
+
+.coming-soon h1::after {
+    content: "";
+    display: block;
+    margin: 0.7rem auto 0 auto;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #8ab4f8 0%, #6ec3f4 100%);
 }
 
 .coming-soon p {
     font-size: 1.1rem;
     color: #b0b0b0;
     margin: 0;
+}
+
+.coming-soon-dots {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.coming-soon-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8ab4f8;
+    opacity: 0.5;
+    animation: dot-bounce 1.2s infinite;
+}
+
+.coming-soon-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.coming-soon-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dot-bounce {
+    0%, 80%, 100% { transform: scale(1); opacity: 0.5; }
+    40% { transform: scale(1.4); opacity: 1; }
+}
+
+.coming-soon-icon:hover, .coming-soon h1:hover {
+    transform: scale(1.08);
+    transition: transform 0.2s;
+}
+
+#version-label {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    color: #3f3f3f;
+    font-size: 0.95em;
+    padding: 4px 12px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    pointer-events: none;
+    user-select: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
 }
 
 @media (max-width: 1400px) {
