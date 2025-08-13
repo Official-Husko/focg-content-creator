@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
     const toggle = document.getElementById('sidebarToggle');
     if (!sidebar || !toggle) return;
-    // Restore sidebar state from localStorage
-    if (localStorage.getItem('sidebarShrunk') === 'true') {
+    // Reverse default: start shrunk unless user expanded
+    if (localStorage.getItem('sidebarShrunk') === null || localStorage.getItem('sidebarShrunk') === 'true') {
         sidebar.classList.add('shrunk');
         sidebar.classList.remove('expanded');
         toggle.querySelector('.material-icons').textContent = 'chevron_right';
