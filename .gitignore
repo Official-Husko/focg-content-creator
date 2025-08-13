@@ -1,4 +1,4 @@
-*.js
+/*.js
 tmp/*
 cmd/focg-content-creator/tmp/*
 cmd/focg-content-creator/__debug_bin*

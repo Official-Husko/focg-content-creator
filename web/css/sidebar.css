@@ -129,7 +129,7 @@
     bottom: 6px;
     height: 3px;
     border-radius: 2px;
-    background: #8ab4f8;
+    background: var(--sidebar-underline, #8ab4f8);
 }
 
 .sidebar.shrunk nav ul li a.active::after,
@@ -148,6 +148,16 @@
     flex-shrink: 0;
     color: #8ab4f8;
     transition: color 0.2s;
+}
+
+/* Sidebar icon color palette using nth-child selectors */
+
+/* Keep hover and active states visually distinct */
+.sidebar nav ul li a:hover .sidebar-icon,
+.sidebar nav ul li a.active .sidebar-icon,
+.sidebar nav ul li a[aria-current="page"] .sidebar-icon {
+    color: #fff !important;
+    filter: drop-shadow(0 0 8px rgba(138,180,248,0.18));
 }
 
 .sidebar nav ul li a:hover .sidebar-icon {
