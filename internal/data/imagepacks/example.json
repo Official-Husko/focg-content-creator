@@ -14,6 +14,7 @@
             "nsfw": false,
             "uuid": "123e4567-e89b-12d3-a456-426614174001",
             "id": "ww.rubert",
+            "path": ["werewolf", "fighter"],
             "filename": "werewolf1.png",
             "title": "Hanzo Shimada Summer Games Skin Overwatch",
             "genders": ["male"],
@@ -21,6 +22,12 @@
             "tags": ["Overwatch", "Hanzo", "Summer Games"],
             "backgrounds": ["bg_thief", "bg_raider"],
             "traits": ["thief", "raider"],
+            "variants": {
+                "injured": "ww.rubert.injured",
+                "normal": "ww.rubert.normal",
+                "naked": "ww.rubert.naked",
+                "erect": "ww.rubert.erect"
+            },
             "metadata": {
                 "artist": "Doctor Anfelo",
                 "url": "https://www.newgrounds.com/art/view/doctoranfelo/hanzo-shimada-summer-games-2019-skin-overwatch",

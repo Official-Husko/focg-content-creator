@@ -1,0 +1,207 @@
+/* imagepack.css - Styles for the Imagepack Editor page */
+
+.imagepack-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: stretch;
+    width: 100%;
+    min-height: 600px;
+}
+
+.imagepack-bubble {
+    background: rgba(35,39,42,0.92);
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    padding: 2rem 2.2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.imagepack-topbar {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(138,180,248,0.08);
+    padding: 0.7rem;
+}
+
+.imagepack-btn {
+    background: linear-gradient(90deg, #8ab4f8 0%, #6ec3f4 100%);
+    color: #23272a;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(138,180,248,0.08);
+    transition: background 0.18s, color 0.18s;
+    margin-right: 0.2rem;
+}
+.imagepack-btn:last-child {
+    margin-right: 0;
+}
+.imagepack-btn:hover {
+    background: linear-gradient(90deg, #6ec3f4 0%, #8ab4f8 100%);
+    color: #181a1b;
+}
+
+.imagepack-btn-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.imagepack-btn-sm {
+    padding: 0.32rem 0.7rem;
+    font-size: 0.98rem;
+    border-radius: 6px;
+    min-width: 0;
+}
+.imagepack-btn-sm .material-icons {
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.imagepack-main {
+    display: flex;
+    flex-direction: row;
+    gap: 2.2rem;
+    min-height: 340px;
+}
+
+.imagepack-tree {
+    flex: 0 0 220px;
+    background: rgba(24,26,27,0.98);
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+    padding: 1.2rem 1rem;
+    overflow-y: auto;
+    max-height: 420px;
+}
+
+.imagepack-preview {
+    flex: 1 1 0;
+    background: rgba(24,26,27,0.98);
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+    padding: 1.2rem 1rem;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.imagepack-properties {
+    flex: 0 0 260px;
+    background: rgba(24,26,27,0.98);
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+    padding: 1.2rem 1rem;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.imagepack-properties-list .prop-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+.imagepack-properties-list .prop-label {
+    min-width: 96px;
+    color: #cfd8e3;
+    font-weight: 500;
+}
+.imagepack-properties-list input[type="text"] {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(138,180,248,0.06);
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    color: #e8eefb;
+    flex: 1;
+}
+.imagepack-properties-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+.array-editor input[type="text"] {
+    width: 100%;
+}
+.imagepack-preview-image.selected {
+    outline: 2px solid rgba(138,180,248,0.18);
+    background: rgba(138,180,248,0.04);
+}
+
+.imagepack-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.2rem;
+    border-top: 1px solid rgba(138,180,248,0.08);
+    padding: 0.9rem;
+    font-size: 1.05rem;
+    color: #b0b0b0;
+    flex-direction: row;
+}
+
+.imagepack-preview-list {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.imagepack-preview-image {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    background: rgba(255,255,255,0.02);
+}
+
+.imagepack-preview-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.imagepack-thumb {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.02);
+}
+
+.imagepack-preview-label {
+    color: #cfd8e3;
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    .imagepack-main {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .imagepack-tree, .imagepack-preview, .imagepack-properties {
+        max-width: 100%;
+        min-width: 0;
+    }
+}

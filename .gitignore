@@ -2,3 +2,4 @@
 tmp/*
 cmd/focg-content-creator/tmp/*
 cmd/focg-content-creator/__debug_bin*
+default-example/*

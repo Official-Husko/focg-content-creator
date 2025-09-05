@@ -1,12 +1,93 @@
 {{define "content"}}
-<div class="coming-soon">
-    <span class="material-icons coming-soon-icon">hourglass_empty</span>
-    <h1>Imagepack Editor</h1>
-    <p>This feature is under development. Stay tuned!</p>
-    <div class="coming-soon-dots">
-        <span class="coming-soon-dot"></span>
-        <span class="coming-soon-dot"></span>
-        <span class="coming-soon-dot"></span>
+<link rel="stylesheet" href="/static/css/imagepack.css">
+<script id="imagepack-json" type="application/json">{
+    "uuid": "123e4567-e89b-12d3-a456-426614174000",
+    "id": "com.author.werewolves",
+    "name": "Werewolves Mega Pack",
+    "author": "Author Name",
+    "description": "Imagepack specifically designed for werewolf-themed content.",
+    "source": "https://example.com/werewolves-mega-pack",
+    "version": "1.0.0",
+    "license": "CC-BY-NC-ND 3.0",
+    "subraces": ["werewolves", "humans"],
+    "tags": ["werewolves", "humans"],
+    "content": [
+        {
+            "nsfw": false,
+            "uuid": "123e4567-e89b-12d3-a456-426614174001",
+            "id": "ww.rubert",
+            "filename": "werewolf1.png",
+            "title": "Hanzo Shimada Summer Games Skin Overwatch",
+            "genders": ["male"],
+            "subraces": ["werewolves", "humans"],
+            "tags": ["Overwatch", "Hanzo", "Summer Games"],
+            "backgrounds": ["bg_thief", "bg_raider"],
+            "traits": ["thief", "raider"],
+            "metadata": {
+                "artist": "Doctor Anfelo",
+                "url": "https://www.newgrounds.com/art/view/doctoranfelo/hanzo-shimada-summer-games-2019-skin-overwatch",
+                "license": "CC-BY-NC-ND 3.0"
+            }
+        },
+        {
+            "nsfw": false,
+            "uuid": "123e4567-e89b-12d3-a456-426614174002",
+            "id": "ww.jessica",
+            "filename": "werewolf2.png",
+            "title": "Ichiro Yamamoto Shikai",
+            "genders": ["female"],
+            "subraces": ["werewolves", "humans"],
+            "tags": ["Bleach", "Ichigo", "Shikai"],
+            "backgrounds": ["bg_thief", "bg_raider"],
+            "traits": ["thief", "raider"],
+            "metadata": {
+                "artist": "Art of Lariz",
+                "url": "https://www.deviantart.com/artoflariz/art/Ichiro-Yamamoto-Shikai-410060416",
+                "license": "CC-BY-NC-ND 3.0"
+            }
+        }
+    ]
+}</script>
+<div class="imagepack-editor">
+    <div class="imagepack-bubble imagepack-topbar">
+        <div class="imagepack-btn-row">
+            <button class="imagepack-btn imagepack-btn-sm"><span class="material-icons">add</span> New</button>
+            <button class="imagepack-btn imagepack-btn-sm"><span class="material-icons">folder_open</span> Load</button>
+            <button class="imagepack-btn imagepack-btn-sm"><span class="material-icons">save</span> Save</button>
+            <button class="imagepack-btn imagepack-btn-sm"><span class="material-icons">file_upload</span> Export</button>
+            <button class="imagepack-btn imagepack-btn-sm"><span class="material-icons">settings</span> Settings</button>
+        </div>
+    </div>
+    <div class="imagepack-bubble">
+        <div class="imagepack-main">
+            <div class="imagepack-tree">
+                <h3>Folders</h3>
+                <!-- Folder tree view goes here -->
+                <div class="imagepack-tree-list">
+                    <div class="imagepack-tree-folder">/assets</div>
+                    <div class="imagepack-tree-folder">/assets/characters</div>
+                    <div class="imagepack-tree-folder">/assets/items</div>
+                </div>
+            </div>
+            <div class="imagepack-preview">
+                <h3>Preview</h3>
+                <!-- Preview display for folders/images -->
+                <div class="imagepack-preview-list">
+                </div>
+            </div>
+            <div class="imagepack-properties">
+                <h3>Properties</h3>
+                <!-- Image properties and values (populated when image selected) -->
+                <div class="imagepack-properties-list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imagepack-bubble imagepack-bottom">
+        <span class="folders-count">Folders: 0</span>
+        <span class="images-count">Images: 0</span>
+        <span class="selected-count">Selected: None</span>
     </div>
 </div>
+<script src="/static/js/imagepack.js"></script>
 {{end}}
